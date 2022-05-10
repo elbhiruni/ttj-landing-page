@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  /* Color */
+  --logo: #1c4d2b;
+  --primary: #1b5e20;
+  --secondary: #e53935;
+  --footer: #263238;
+
+  /* Font */
+  --ttj: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1rem;
+  font-family: var(--ttj);
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Awal Header */
+.header {
+  flex-direction: column;
+}
+
+.left {
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 0.6rem;
+  gap: 5px;
+  align-items: center;
+}
+
+.logo-img {
+  width: 3em;
+}
+
+.logo-text {
+  color: var(--logo);
+  text-transform: uppercase;
+}
+
+.logo-text > h1 {
+  font-size: 1em;
+  flex-direction: column;
+}
+
+.logo-text h1 > .regular {
+  font-weight: 500;
+}
+
+.fa-bars,
+.fa-xmark {
+  color: var(--logo);
+  font-size: 1.2em;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.fa-xmark {
+  font-size: 1.4em;
+}
+
+.right {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.6s;
+  transition-timing-function: ease-in-out;
+}
+
+.right ul {
+  margin: 10px 20px;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition-delay: 1s;
+}
+
+.right li {
+  width: 100%;
+  text-align: center;
+}
+
+.right a {
+  color: var(--logo);
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--logo);
+  border-radius: 4px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.25s;
+}
+
+.right a:active {
+  color: white;
+  background-color: var(--logo);
+}
+
+.show-nav {
+  height: 165px;
+}
+
+/* Awal Main */
+.main {
+  flex-direction: column;
+}
+
+.main h2 {
+  font-size: 1.8rem;
+}
+
+.main h3 {
+  font-size: 1.2rem;
+}
+
+.hero-image {
+  height: 200px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/images/Taman-Menteng.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-text {
+  height: 100%;
+  text-align: center;
+  color: white;
+  margin: 0 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text-center {
+  flex-grow: 2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text-center p {
+  font-size: 0.6rem;
+  margin-bottom: 10px;
+}
+
+.hero-text-center a {
+  display: inline-block;
+  color: white;
+  padding: 2px;
+  animation-name: location;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes location {
+  0% {
+    color: white;
+    transform: scale(1);
+  }
+  
+  50% {
+    color: var(--secondary);
+    transform: scale(1.2);
+  }
+
+  100% {
+    color: white;
+    transform: scale(1);
+  }
+}
+
+.hero-text-bottom {
+  padding-bottom: 5px;
+}
+
+.hero-text-bottom a,
+.hero-text-bottom p {
+  color: white;
+  font-size: 0.5rem;
+}
+
+.hero-text-bottom a {
+  text-decoration: underline;
+}
+
+/* Article */
+.content {
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.content > h2 {
+  color: var(--primary);
+  text-align: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.card > h3 {
+  color: var(--primary);
+}
+
+.card-content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.aside {
+  color: white;
+  background-color: var(--secondary);
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.profile {
+  border-top: 1px solid white;
+  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.profile-pict {
+  max-width: 150px;
+  max-height: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-text h3 {
+  margin-bottom: 10px;
+}
+
+.profile-text .socmed {
+  margin-bottom: 10px;
+}
+
+.socmed a:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socmed a {
+  display: inline-block;
+  color: white;
+  font-size: 2em;
+  transition: all 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.socmed a:hover {
+  transform: rotate(360deg);
+}
+
+/* Awal Footer */
+.footer {
+  color: white;
+  background-color: var(--footer);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer h2 {
+  font-size: 1.8rem;
+}
+
+.ttj h2 {
+  margin-bottom: 5px;
+}
+
+.footer .socmed {
+  margin-top: 10px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Header */
+  .logo {
+    font-size: 1rem;
+  }
+
+  .fa-bars {
+    font-size: 1.6em;
+  }
+
+  .right a {
+    font-size: 1.4rem;
+  }
+
+  .show-nav {
+    height: 195px;
+  }
+
+  /* Main */
+  .main h2 {
+    font-size: 2.5rem;
+  }
+
+  .main h3 {
+    font-size: 1.8rem;
+  }
+
+  .hero-image {
+    height: 400px;
+  }
+
+  .hero-text-center p {
+    font-size: 1rem;
+  }
+
+  .hero-text-center a {
+    font-size: 1.5rem;
+  }
+
+  .hero-text-bottom a,
+  .hero-text-bottom p {
+    font-size: 0.8rem;
+  }
+
+  .card-text > p,
+  .profile-text > p {
+    font-size: 1.6rem;
+  }
+
+  /* Footer */
+  .footer h2 {
+    font-size: 2rem;
+  }
+
+  .footer p {
+    font-size: 1.4rem;
+  }
+
+  .socmed a {
+    font-size: 3em;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+  /* Header */
+  .header {
+    padding: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .left {
+    padding: 0;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .right {
+    height: auto;
+  }
+
+  .right ul {
+    margin: 0;
+    flex-direction: row;
+  }
+
+  .right li {
+    width: auto;
+  }
+
+  .right a:hover {
+    color: white;
+    background-color: var(--logo);
+    font-size: 1.2rem;
+  }
+
+  /* Main */
+  .main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  .main h2 {
+    font-size: 3rem;
+  }
+
+  .main h3 {
+    font-size: 2rem;
+  }
+
+  .hero-image {
+    min-width: 100%;
+    min-height: 100vh;
+  }
+
+  .hero-text-center p {
+    font-size: 2rem;
+  }
+
+  .hero-text-center a {
+    font-size: 2rem;
+  }
+
+  .hero-text-bottom a {
+    display: inline-block;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .hero-text-bottom a:hover {
+    color: lightgreen;
+    font-size: 0.6rem;
+  }
+
+  .content {
+    max-width: 65vw;
+  }
+
+  .card-text > p {
+    font-size: 1.6rem;
+  }
+
+  .aside {
+    max-width: 30vw;
+    margin-top: 96px;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+}
