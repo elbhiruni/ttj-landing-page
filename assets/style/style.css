@@ -197,7 +197,7 @@ ul {
     color: white;
     transform: scale(1);
   }
-  
+
   50% {
     color: var(--secondary);
     transform: scale(1.2);
@@ -374,7 +374,7 @@ ul {
     font-size: 0.8rem;
   }
 
-  .card-text > p,
+  p.card-text,
   .profile-text > p {
     font-size: 1.6rem;
   }
@@ -477,7 +477,7 @@ ul {
     max-width: 65vw;
   }
 
-  .card-text > p {
+  p.card-text {
     font-size: 1.6rem;
   }
 
