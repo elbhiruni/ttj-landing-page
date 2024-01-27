@@ -12,11 +12,11 @@ const articles = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  const contentArticlesEl = document.getElementById("content-articles");
+  const articlesEl = document.getElementById("articles");
 
   for (const article of articles) {
-    const articleEl = document.createElement("article");
-    articleEl.className = "card";
+    const articleCardEl = document.createElement("div");
+    articleCardEl.className = "card";
 
     const articleTitleEl = document.createElement("h3");
     articleTitleEl.textContent = article.title;
@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
     articleContentEl.appendChild(articleImgEl);
     articleContentEl.appendChild(articleTextEl);
 
-    articleEl.appendChild(articleTitleEl);
-    articleEl.appendChild(articleContentEl);
+    articleCardEl.appendChild(articleTitleEl);
+    articleCardEl.appendChild(articleContentEl);
 
-    contentArticlesEl.appendChild(articleEl);
+    articlesEl.appendChild(articleCardEl);
   }
 });
 
